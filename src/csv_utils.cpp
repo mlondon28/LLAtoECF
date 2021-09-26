@@ -5,10 +5,10 @@
 
 using namespace std;
 
-std::string fileToString(const string & path){
+std::string fileToString(const string & pathToCsv){
     auto ss = ostringstream{};
 
-    ifstream file(path);
+    ifstream file(pathToCsv);
 
     if(!file.is_open()){
         cerr << "Couldn't open file!" << endl;
@@ -19,10 +19,10 @@ std::string fileToString(const string & path){
     return ss.str();
 }
 
-void read_csv(std::string filepath, vector<lla_data> & aData, char delimiter)
+void read_csv(const std::string & pathToCsv, vector<lla_data> & aData, const char & delimiter)
 {
     string content, record;
-    content = fileToString(filepath);
+    content = fileToString(pathToCsv);
 
     istringstream sstream(content);
     string::size_type sz;

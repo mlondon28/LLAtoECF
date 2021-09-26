@@ -1,2 +1,0 @@
-/bin/ar qc libreadcsv.a  CMakeFiles/readcsv.dir/src/csv_utils.cpp.o
-/bin/ranlib libreadcsv.a
