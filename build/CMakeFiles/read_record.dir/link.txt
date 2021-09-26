@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9  -g  -rdynamic CMakeFiles/read_record.dir/src/read_record.cpp.o  -o read_record 

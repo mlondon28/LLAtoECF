@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/hello.h
+iostream
+-
+
+/home/matt/projects/scitec-coding-problem/src/helloWorld.cpp
+iostream
+-
+hello.h
+/home/matt/projects/scitec-coding-problem/src/hello.h
+

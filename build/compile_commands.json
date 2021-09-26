@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/matt/projects/scitec-coding-problem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/matt/projects/scitec-coding-problem/include  -g   -o CMakeFiles/LLAtoECF.dir/src/LLAtoECF.cpp.o -c /home/matt/projects/scitec-coding-problem/src/LLAtoECF.cpp",
+  "file": "/home/matt/projects/scitec-coding-problem/src/LLAtoECF.cpp"
+},
+{
+  "directory": "/home/matt/projects/scitec-coding-problem/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/matt/projects/scitec-coding-problem/include  -g   -o CMakeFiles/readcsv.dir/src/csv_utils.cpp.o -c /home/matt/projects/scitec-coding-problem/src/csv_utils.cpp",
+  "file": "/home/matt/projects/scitec-coding-problem/src/csv_utils.cpp"
+}
+]

@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/csv_utils.h
+gps_structs.h
+../include/gps_structs.h
+vector
+-
+string
+-
+
+../include/gps_structs.h
+
+/home/matt/projects/scitec-coding-problem/src/csv_utils.cpp
+csv_utils.h
+/home/matt/projects/scitec-coding-problem/src/csv_utils.h
+iostream
+-
+fstream
+-
+sstream
+-
+

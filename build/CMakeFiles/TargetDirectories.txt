@@ -1,0 +1,6 @@
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/edit_cache.dir
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/rebuild_cache.dir
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/package.dir
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/LLAtoECF.dir
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/package_source.dir
+/home/matt/projects/scitec-coding-problem/build/CMakeFiles/readcsv.dir

@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/matt/projects/scitec-coding-problem/include/csv_utils.h
+string
+-
+
+/home/matt/projects/scitec-coding-problem/src/main.cpp
+../include/csv_utils.h
+/home/matt/projects/scitec-coding-problem/include/csv_utils.h
+string
+-
+iostream
+-
+
