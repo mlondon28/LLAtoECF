@@ -35,6 +35,7 @@ int main()
     cout << "Interpolated Velocity at Time (" << time2 << " [s]): " << interpolatedVel2 << " [meters / second]\n" << endl;
 
     // ECF.velocity printout
+    cout.precision(7);
     cout << "ECF.velocity for the first 10 data points:\n";
     int count = 0;
     for(auto data : ECFdata){
