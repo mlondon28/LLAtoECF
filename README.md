@@ -1,4 +1,4 @@
-# SciTec Coding Challenge
+# LLA-to-ECEF Coding Challenge
 
 ## Build and Run Instructions
 ```
@@ -17,9 +17,14 @@ cmake ..
 
 ### Room for Improvement:
 There are several places I would improve with more time.
-- error handling
-- unit testing
+- Generic functionality
+  - If I were writing this code for a larger codebase I would probably template these functions / make them more generic for ease of use of the end user.
+- Input / Error Handling:
+  - Adding logic to check the validity of the input data. Would want useful exceptions thrown. 
+- Unit testing
+  - Given a Ci/CD pipeline, or even just a test suite, it would be great to have a few tests set up to have the conversions checked against known data.
 - CLI arg input
+  - If I had access to some external librarires, I would add some command line argument parsing. 
 
 
 ## Sample Output:
