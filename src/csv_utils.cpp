@@ -28,9 +28,10 @@ void read_csv(const std::string & pathToCsv, vector<lla_data> & aData, const cha
     string::size_type sz;
 
     int count = 0;
-    while (std::getline(sstream, record)) {
+    while (getline(sstream, record)) {
         istringstream line(record);
-        while (std::getline(line, record, delimiter)) {
+        while (getline(line, record, delimiter)) {
+            // Populate data. Assumes csv is formatted as [time,lat,lon,alt]
             switch (count % 4)
             {
             case 0:
@@ -52,18 +53,3 @@ void read_csv(const std::string & pathToCsv, vector<lla_data> & aData, const cha
         }
     }
 }
-
-// int main(){
-//     vector<lla_data> data;
-//     read_csv("/home/matt/projects/scitec-coding-problem/data/SciTec_code_problem_data.csv", data, ',');
-
-//     cout.precision(12);
-//     for(auto item : data){
-//         cout << "Time: " << item.time << endl;
-//         cout << "lat: " << item.lat << endl;
-//         cout << "lon: " << item.lon << endl;
-//         cout << "alt: " << item.alt << endl;
-//     }
-
-//     return 0;
-// }

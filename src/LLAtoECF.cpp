@@ -4,6 +4,7 @@
 #include <algorithm>
 
 /**
+ * == CONSTANTS AND EQUATIONS ==
  * WGS84 Params:
  * a = 6378137                      // semi-major axis (a)
  * b = a(1 - f)                     // semi-minor axis (b)
@@ -105,11 +106,11 @@ bool inRange(const double & low, const double & high, const double & val){
 }
 
 double interpolateVelocity(const std::vector<ECFcoord> & ECFdata, const int & time){
+
     // Verify that the time requested is in the range of the data
     if(!inRange(ECFdata[0].time, ECFdata.back().time, time)){
         throw  std::invalid_argument("Time requested is outside range of data loaded!");
     }
-
 
     // returns an iterator pointing to the first element that is not less than input var: time
     auto low = std::lower_bound(ECFdata.begin(), ECFdata.end(), time, [](const ECFcoord &lhs, double rhs){
@@ -128,51 +129,3 @@ double interpolateVelocity(const std::vector<ECFcoord> & ECFdata, const int & ti
 
     return v;
 }
-
-
-// int main()
-// {
-//     std::vector<lla_data> latLonData;
-//     std::vector<ECFcoord> ECFdata;
-//     std::string filepath = "/home/matt/projects/scitec-coding-problem/data/SciTec_code_problem_data.csv";
-//     char delimiter = ',';
-
-//     read_csv(filepath, latLonData, delimiter);
-
-//     for(auto record : latLonData){
-//         ECFcoord xyz = LLAtoECF(record);
-//         ECFdata.push_back(xyz);
-//     }
-
-//     ECFvelocity(ECFdata);
-
-//     int time1 = 1532334000, time2 = 1532335268; // seconds since Unix epoch
-
-//     double interpolatedVel1 = interpolateVelocity(ECFdata, time1);
-//     double interpolatedVel2 = interpolateVelocity(ECFdata, time2);
-
-//     cout << "Interpolated Velocity at Time (" << time1 << "): " << interpolatedVel1 << endl;
-//     cout << "Interpolated Velocity at Time (" << time2 << "): " << interpolatedVel2 << endl;
-
-//     // ECEFvelocity printout
-//     int count = 0;
-//     for(auto data : ECFdata){
-//         cout << data.velocity << "\t[meters / second]" << endl;
-//         if(count > 10){
-//             break;
-//         }
-//         count++;
-//     }
-
-//     for(auto LLA : latLonData){
-//         ECFcoord E = LLAtoECF(LLA);
-//         cout.precision(12);
-//         cout << "\nX: " << E.x << " meters." << endl;
-//         cout << "Y: " << E.y << " meters." << endl;
-//         cout << "Z: " << E.z << " meters." << '\n' << endl;
-//         break;
-//     }
-
-
-//     return 0;
-// }
